@@ -1,6 +1,6 @@
-let location1 = 1;
-let location2 = 2;
-let location3 = 3;
+let randomLoc = Math.floor(Math.random() * 5);
+let location2 = randomLoc + 1;
+let location3 = randomLoc + 2;
 
 let chances = 0; 
 let hits = 0;
@@ -14,7 +14,7 @@ while (sunk != true)
             }
     else {
         chances++;
-        if(guess == location1 || guess == location2 || guess == location3){
+        if(guess == randomLoc || guess == location2 || guess == location3){
             hits++
             {
                 if(hits == 3)
@@ -24,6 +24,7 @@ while (sunk != true)
                 }
             }
         }
+            else {alert("Miss!")}
     }
 }
 
